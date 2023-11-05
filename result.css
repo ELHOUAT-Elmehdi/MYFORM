@@ -1,0 +1,41 @@
+.centered img.myphoto { 
+  width: 150px;
+  border-radius: 45%;
+  height: 190px;
+  transform: translate(55px);
+}
+.cv-container {
+  display: flex;
+  width: 90%;
+  max-width: 950px;
+  margin: 0 auto;
+  border:5px solid rgb(240, 246, 246);
+  border-radius: 50px;
+  background-color: rgb(173, 162, 162);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.cv-column1 {
+  flex: 1;
+  padding: 25px;
+}
+.cv-column2 {
+  flex: 1;
+  padding: 25px;
+  transform: translateY(85px);
+}
+.Footer {
+  text-align: center;
+  width: 80%;
+  max-width: 954px;
+  border:1px solid rgb(162, 198, 247);
+  border-radius: 40px;
+  background-color: rgb(168, 149, 149);
+  transform: translate(188px); 
+}
+body {
+  background-image: url('https://static-cse.canva.com/blob/562733/accentcolorforresume.jpg');
+  background-size: cover;
+  background-size: 100% 100%;
+  background-position: center center;
+}

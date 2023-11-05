@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="FORM.css" type="text/css">
+    <title>Formulaire-CV</title>
+</head>
+<body>
+    <div>
+        <h1>Formulaire-CV</h1>
+        <form id="MYFORM">
+            <div>
+                <label for="title">Titre du CV :</label>
+                <input type="text" id="title" name="title" placeholder="Titre du CV" required>
+                <div id="titreduCVError" class="error"></div>
+            </div>
+            <br>     
+            <div>
+                <label for="lname">Nom :</label>
+                <input type="text" id="lname" name="lname" placeholder="ELHOUAT" required oninput="sanitizeAndUpperCase(this)">
+                <div id="nomError" class="error"></div>
+            </div>
+            <br>      
+            <div>
+                <label for="fname">Prénom :</label>
+                <input type="text" id="fname" name="fname" placeholder="Elmehdi" required oninput="capitalizeFirstLetter(this)">
+                <div id="prenomError" class="error"></div>
+            </div>
+            <br> 
+            <div>
+                <label for="age">Age :</label>
+                <input type="number" id="age" name="age" min="18" max="99" value="18" required>
+                <div id="ageError" class="error"></div>
+            </div>
+            <br> 
+            <div>
+                <label for="birthdate">La date de naissance :</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+                <div id="LadatedenaissanceError" class="error"></div>
+            </div>
+            <br> 
+            <div>
+                <label for="adresse">Adresse :</label>
+                <input type="text" id="adresse" name="adresse" placeholder="LOT NAHDA NO 838 MHAMID MARRAKECH" required>
+                <div id="adresseError" class="error"></div>
+            </div>
+            <br> 
+            <div>
+                <label for="phone">Tel :</label>
+                <input type="tel" id="phone" name="phone" placeholder="06(7)-12-34-56-78" maxlength="10" required>
+                <div id="phoneError" class="error"></div>
+            </div>
+            <br> 
+            <div>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="mehdielhouat3@gmail.com" required>
+                <div id="emailError" class="error"></div>
+            </div>
+            <br> 
+            <div>        
+                <label for="familiale">La situation familiale :</label>    
+                <label for="Célibataire">Célibataire</label>
+                <input type="radio" id="Célibataire" name="familiale" value="Célibataire">
+                <label for="Marié(e)">Marié(e)</label>
+                <input type="radio" id="Marié(e)" name="familiale" value="Marié(e)">
+                <label for="Divorcé(e)">Divorcé(e)</label>
+                <input type="radio" id="Divorcé(e)" name="familiale" value="Divorcé(e)">
+            </div>
+            <br> 
+            <div>
+                <label for="diplome">Diplome :</label>
+                <select id="diplome" name="diplome" required>
+                    <option value="">Sélectionnez un diplôme</option>
+                    <option value="DEUST">DEUST</option>
+                    <option value="DEUT">DEUT</option>
+                    <option value="Master">Master</option>
+                    <option value="Ingénieur d'Etat">Ingénieur d'Etat</option>   
+                    <option value="Doctorat">Doctorat</option>
+                    <option value="Autre">Autre</option>                      
+                </select>
+                <div id="diplomeError" class="error">
+            </div>
+            <br>
+            <div>
+                <label for="profil">Profil :</label>
+                <textarea id="profil" name="profil" required></textarea>
+            </div id="profilError" class="error">
+            <br>
+            <div>
+                <label for="formation">Formation :</label>
+                <textarea id="formation" name="formation" required></textarea>
+            </div id="formationError" class="error">
+            <br>
+            <div>
+                <label for="compet">Compétences :</label>
+                <textarea id="compet" name="compet" required></textarea>
+            </div id="abcError" class="error"><div></div>
+            <br>
+            <div>
+                <label for="competences">Compétences techniques :</label>
+                <textarea id="competences" name="competences" required></textarea>
+                <div id="competencesError" class="error">
+                  <br>
+                  <label for="L'expression orale :" id="eo">L'expression orale :</label>
+                  <input type="checkbox" id="L'expression orale :" name="L'expression orale :">
+                  <label for="La compréhension orale :">La compréhension orale :</label>
+                  <input type="checkbox" id="La compréhension orale :" name="La compréhension orale :">
+                  <label for="L'expression écrite :">L'expression écrite :</label>
+                  <input type="checkbox" id="L'expression écrite :" name="L'expression écrite :">
+                  <label for="La compréhension écrite :">La compréhension écrite :</label>
+                  <input type="checkbox" id="La compréhension écrite :" name="La compréhension écrite :">
+                </div>
+                <br>
+            </div>
+            <br> 
+            <div>
+                <label for="objectifProfessionnel">Description de l'objectif professionnel :</label>
+                <textarea id="objectifProfessionnel" name="objectifProfessionnel" required></textarea>
+                <div id="objectifProfessionnelError" class="error"></div>
+            </div>
+            <br> 
+            <div>
+                <label for="int">Intérêts :</label>
+                <textarea id="int" name="int" required></textarea>
+            </div id="intError" class="error">
+            <br>
+            <div>
+                <label for="autre">Autre :</label>
+                <textarea id="autre" name="autre" required></textarea>
+            </div id="autreError" class="error">
+            <br> 
+            <div class="form-group">
+                <button type="submit" id="submitBtn" value="Soumettre">Envoyer</button>
+            </div> 
+        </form>
+    </div>
+    <script src="FORM.js"></script>
+    <div id="result"></div>
+</body>
+</html>
+
+
+

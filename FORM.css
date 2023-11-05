@@ -1,0 +1,46 @@
+body {
+    text-align: center;
+    background-image: url("https://wallpapers.com/images/hd/green-nature-iphone-9rewxisyxnqto4cu.jpg");
+    border-radius: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%100%;
+    font-family: Century Gothic;
+  }
+  form {
+    
+    padding-left: 200px; 
+    padding-right: 200px;
+    border-radius: 50px;
+    display: inline-block; 
+    background-color: rgba(85, 241, 176, 0.7); 
+    backdrop-filter: blur(10px);
+    width: 35%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  form input, form textarea, form select {
+    border-radius: 500px;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 0px;
+    opacity: 1px;
+  }
+  form .form-group button {
+    background-color: #00fd3f;
+    color: #0f0101;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  h1{
+    color: rgb(255, 255, 255);
+  }
+
+
+
+
+
